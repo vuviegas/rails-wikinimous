@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="navbar-header">
+    <h1><%= link_to 'Wikinimous', articles_path %></h1>
+    <h3><%= link_to 'New Article', new_article_path %></h3>
+  </div>
+  <h2>Editing article</h2>
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title %></br>
+    <%= f.text_field :title %></br></br>
+    <%= f.label :content %></br>
+    <%= f.text_field :content %></br></br>
+    <%= f.submit %></br>
+  <% end %>
+  </br>
+  <%= link_to 'Show', article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</div>
